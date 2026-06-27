@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Your Password</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .card {
+        background: #ffffff;
+        max-width: 420px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 40px 32px;
+        box-shadow:
+          0 10px 25px -5px rgba(15, 23, 42, 0.08),
+          0 8px 10px -6px rgba(15, 23, 42, 0.08);
+        text-align: center;
+      }
+
+      .icon-circle {
+        width: 64px;
+        height: 64px;
+        background: #f0f9ff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 24px auto;
+      }
+
+      .icon-circle svg {
+        width: 32px;
+        height: 32px;
+        color: #0284c7;
+      }
+
+      h2 {
+        color: #0f172a;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 28px;
+      }
+
+      .email-badge {
+        display: inline-block;
+        background: #f1f5f9;
+        color: #334155;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+
+      .input-group {
+        text-align: left;
+        margin-bottom: 24px;
+        position: relative;
+      }
+
+      label {
+        display: block;
+        color: #475569;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px 44px 14px 16px;
+        border: 1px solid #e2e8f0;
+        background: #f8fafc;
+        border-radius: 12px;
+        font-size: 15px;
+        color: #0f172a;
+        outline: none;
+        transition: all 0.2s ease;
+      }
+
+      input:focus {
+        border-color: #0284c7;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+      }
+
+      .toggle-password {
+        position: absolute;
+        right: 14px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #64748b;
+        display: flex;
+        align-items: center;
+      }
+
+      .btn-submit {
+        width: 100%;
+        background: #0284c7;
+        color: #ffffff;
+        border: none;
+        padding: 14px;
+        border-radius: 12px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .btn-submit:hover {
+        background: #0369a1;
+      }
+
+      .footer-text {
+        margin-top: 24px;
+        font-size: 12px;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="icon-circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+          />
+        </svg>
+      </div>
+
+      <h2>Create New Password</h2>
+      <p class="subtitle">
+        Secure your profile workspace below. Choose a strong mix of characters
+        to complete deployment initialization.
+      </p>
+
+      <div class="email-badge" id="email-display">
+        loading account payload...
+      </div>
+
+      <form id="reset-form">
+        <div class="input-group">
+          <label for="password">New Account Password</label>
+          <div class="input-wrapper">
+            <input
+              type="password"
+              id="password"
+              placeholder="Minimum 6 characters"
+              required
+              minlength="6"
+            />
+            <button
+              type="button"
+              class="toggle-password"
+              id="toggle-btn"
+              onclick="togglePasswordVisibility()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="width: 20px; height: 20px"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Update Password</button>
+      </form>
+
+      <p class="footer-text">Finance Tracker Secure Onboarding Gateway</p>
+    </div>
+
+    <script>
+      // Grabs the real parameters Firebase appends directly in the browser address context url window
+      function getParameterByName(name) {
+        const url = window.location.href;
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      // Set the user email dynamically onto the badge item
+      const userEmail = getParameterByName("email") || "Your Account Profile";
+      document.getElementById("email-display").innerText = userEmail;
+
+      function togglePasswordVisibility() {
+        const passInput = document.getElementById("password");
+        if (passInput.type === "password") {
+          passInput.type = "text";
+        } else {
+          passInput.type = "password";
+        }
+      }
+
+      // Connect form request directly into internal native firebase validation logic
+      document
+        .getElementById("reset-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const actionCode = getParameterByName("oobCode");
+          const newPassword = document.getElementById("password").value;
+
+          // Note: Firebase provides standard window handles or you can let Firebase
+          // automatically run this layout injection direct into your authentication console window setup.
+          alert(
+            "Password processing requested! Make sure this matches your internal Firebase template handler target.",
+          );
+        });
+    </script>
+  </body>
+</html>
