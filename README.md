@@ -12,7 +12,7 @@ A cross-platform mobile app built with React Native, Expo, and Firebase for trac
   <tr>
     <td align="center"><b>History</b><br/><img src="Screenshot_2026-06-27-14-45-31-795_com.keljo504.financetracker.jpg" width="200"/></td>
     <td align="center"><b>Analytics</b><br/><img src="Screenshot_2026-06-27-14-45-48-399_com.keljo504.financetracker.jpg" width="200"/></td>
-    <td align="center"><b>Settings</b><br/><img src="IMG_20260627_150208.jpg" width="200"/></td>
+    <td align="center"><b>Settings</b><br/><img src="Screenshot_2026-06-27-14-45-54-189_com.keljo504.financetracker.jpg" width="200"/></td>
   </tr>
   <tr>
     <td align="center"><b>Reset Password</b><br/><img src="Screenshot_2026-06-27-14-46-05-281_com.keljo504.financetracker.jpg" width="200"/></td>
