@@ -18,3 +18,5 @@ A cross-platform mobile app built with React Native, Expo, and Firebase for trac
     <td align="center"><b>Reset Password</b><br/><img src="Screenshot_2026-06-27-14-46-05-281_com.keljo504.financetracker.jpg" width="200"/></td>
   </tr>
 </table>
+
+🔗 **Test the app:** [Download the App](https://drive.google.com/file/d/1AueWTES-Sr90VrYuXoCMjZaLKSvMhq7S/view?usp=drivesdk)
